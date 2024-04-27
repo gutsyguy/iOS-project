@@ -4,7 +4,7 @@
 //
 //  Created by admin on 4/26/24.
 //
-
+import CoreML
 import SwiftUI
 
 struct ContentView: View {
