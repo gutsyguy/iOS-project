@@ -9,13 +9,48 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        GeometryReader { geometry in
+            
+            //Dynamic screen variables
+            let screenWidth = geometry.size.width
+            let screenHeight = geometry.size.height
+            
+            VStack(alignment: .center) {
+                Text("World Controller")
+               
+                Image("upArrow")
+                    .onTapGesture {
+                        Task{
+                            await apiRequest(endpoint:"moveForward")
+                        }
+                    }
+                
+                HStack(spacing: screenWidth/4){
+                    Image("leftArrow")
+                    .onTapGesture {
+                        Task{
+                            await apiRequest(endpoint:"turnLeft")
+                        }
+                    }
+                    Image("rightArrow")
+                    .onTapGesture {
+                        Task{
+                            await apiRequest(endpoint:"turnRight")
+                        }
+                    }
+                }
+                .padding(20)
+                
+                Image("downArrow")
+                    .onTapGesture {
+                        Task{
+                            await apiRequest(endpoint:"moveBackward")
+                        }
+                }
+            }
+            .padding()
+            .frame(width: screenWidth, height:screenHeight)
         }
-        .padding()
     }
 }
 

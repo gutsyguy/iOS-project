@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840A3B1B2BE5C3ED00B44268 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A3B1A2BE5C3ED00B44268 /* BluetoothController.swift */; };
 		84121B2E2BDC85EF00FB2767 /* IOS_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121B2D2BDC85EF00FB2767 /* IOS_ProjectApp.swift */; };
 		84121B302BDC85EF00FB2767 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121B2F2BDC85EF00FB2767 /* ContentView.swift */; };
 		84121B322BDC85F100FB2767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84121B312BDC85F100FB2767 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		84121B402BDC85F200FB2767 /* IOS_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121B3F2BDC85F200FB2767 /* IOS_ProjectTests.swift */; };
 		84121B4A2BDC85F200FB2767 /* IOS_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121B492BDC85F200FB2767 /* IOS_ProjectUITests.swift */; };
 		84121B4C2BDC85F200FB2767 /* IOS_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121B4B2BDC85F200FB2767 /* IOS_ProjectUITestsLaunchTests.swift */; };
+		84A543B62BF839D0006AA00E /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A543B52BF839D0006AA00E /* ApiController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840A3B1A2BE5C3ED00B44268 /* BluetoothController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		84121B2A2BDC85EF00FB2767 /* IOS-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84121B2D2BDC85EF00FB2767 /* IOS_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_ProjectApp.swift; sourceTree = "<group>"; };
 		84121B2F2BDC85EF00FB2767 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		84121B452BDC85F200FB2767 /* IOS-ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS-ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84121B492BDC85F200FB2767 /* IOS_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_ProjectUITests.swift; sourceTree = "<group>"; };
 		84121B4B2BDC85F200FB2767 /* IOS_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84A543B52BF839D0006AA00E /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				84121B312BDC85F100FB2767 /* Assets.xcassets */,
 				84121B332BDC85F100FB2767 /* IOS_Project.entitlements */,
 				84121B342BDC85F100FB2767 /* Preview Content */,
+				840A3B1A2BE5C3ED00B44268 /* BluetoothController.swift */,
+				84A543B52BF839D0006AA00E /* ApiController.swift */,
 			);
 			path = "IOS-Project";
 			sourceTree = "<group>";
@@ -217,6 +223,10 @@
 				Base,
 			);
 			mainGroup = 84121B212BDC85EF00FB2767;
+			packageReferences = (
+				8462235D2BEEFC190069CAC2 /* XCRemoteSwiftPackageReference "CombineCoreBluetooth" */,
+				84A543B72BF83B94006AA00E /* XCRemoteSwiftPackageReference "swift-http-types" */,
+			);
 			productRefGroup = 84121B2B2BDC85EF00FB2767 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A543B62BF839D0006AA00E /* ApiController.swift in Sources */,
 				84121B302BDC85EF00FB2767 /* ContentView.swift in Sources */,
+				840A3B1B2BE5C3ED00B44268 /* BluetoothController.swift in Sources */,
 				84121B2E2BDC85EF00FB2767 /* IOS_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +621,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8462235D2BEEFC190069CAC2 /* XCRemoteSwiftPackageReference "CombineCoreBluetooth" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StarryInternet/CombineCoreBluetooth.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+		84A543B72BF83B94006AA00E /* XCRemoteSwiftPackageReference "swift-http-types" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-http-types.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 84121B222BDC85EF00FB2767 /* Project object */;
 }
